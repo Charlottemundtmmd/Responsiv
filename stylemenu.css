@@ -43,20 +43,56 @@ nav a{
 nav a:hover{
 	background-color: #212121;
 }
+nav ul ul {
+	display: none; 
+	position: absolute;
+}
+nav ul li:hover > ul{
+	display: inherit;
+	background-color: #AA898A;
+	width: 134px;
+	
+}
+nav ul ul li{
+	display: block;
+	
+}
+.myStyle{
+	display: block;
+}
+button{
+	display: none;
+}
 /*Responsiv styles - css media query*/
 @media all and (max-width:768px){
 	h1{
 	font-size: 35px;
 	margin-top: 0px; 
 	}
+	nav{
+		display: none;
+	}
 	nav ul li{
 		display: block;
-		border: 1px solid #B24244;
+		border-bottom: 1px solid #B24244;
+	}
+	nav ul li:last-child{
+		border: none;
 	}
 	nav a{
 		text-align: center;
-
 	}
+	/*Responsiv DD menu*/
+	nav ul li:hover > ul{
+	position: static;
+	background-color: #F1C3C4;
+	width: 100%;
+	
+}
+	button{
+	display: block;
+}
+	
 	footer{
 		display: none; 
 	}
